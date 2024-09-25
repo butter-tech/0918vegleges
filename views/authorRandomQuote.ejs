@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quote by Author</title>
+</head>
+<body>
+  <% if (message) { %>
+    <!-- Ha van message, akkor jelenítse meg -->
+    <h1><%= message %></h1>
+  <% } else { %>
+    <!-- Ha nincs message, akkor az idézetet jeleníti meg -->
+    <h1>Random Quote by <%= author %></h1>
+    <p>"<%= quote %>"</p>
+  <% } %>
+  <!-- Vissza a kereső űrlapra -->
+  <a href="/authorRandomForm">Vissza a kereséshez</a>
+</body>
+</html>

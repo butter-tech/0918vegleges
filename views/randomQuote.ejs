@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Véletlenszerű Idézet</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Brush Script MT', cursive; /* Kézíráshoz hasonló betűtípus */
+            background-color: #f0f0f0; /* Világos háttérszín */
+            text-align: center;
+        }
+        .quote {
+            font-size: 2em; /* Nagy szövegméret */
+            max-width: 80%; /* Szélesség korlátozása */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #fff; /* Fehér háttér a szövegdobozhoz */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Finom árnyék */
+        }
+        .author {
+            margin-top: 10px;
+            font-size: 1.5em; /* Kisebb szövegméret a szerzőnek */
+            color: #555; /* Sötétebb szín a szerző nevének */
+        }
+    </style>
+</head>
+<body>
+    <div class="quote">
+        <p><%= quote.quote %></p>
+        <p class="author"><%= quote.author %></p>
+    </div>
+</body>
+</html>

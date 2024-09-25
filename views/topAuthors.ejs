@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Top Authors</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <h1>Top Authors</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Number of Quotes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% authors.forEach(function(author) { %>
+                <tr>
+                    <td><%= author.author %></td>
+                    <td><%= author.count %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

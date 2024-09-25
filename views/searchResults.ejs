@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keresési Eredmények</title>
+</head>
+<body>
+  <h1>Keresési Eredmények</h1>
+
+  <form action="/search" method="get">
+    <input type="text" name="text" placeholder="Írja be a keresendő szöveget" value="<%= searchText %>">
+    <button type="submit">Keresés</button>
+  </form>
+
+  <% if (quotes.length > 0) { %>
+    <ul>
+      <% quotes.forEach(quote => { %>
+        <li><strong><%= quote.author %>:</strong> <%= quote.quote %></li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>Nincs találat a keresésre.</p>
+  <% } %>
+</body>
+</html>

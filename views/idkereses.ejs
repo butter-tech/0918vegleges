@@ -3,11 +3,16 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title><%= message %></title>
+    <title>Idézet</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-    <p><%= message %></p>
+    <h1>Idézet</h1>
+    <div>
+        <p><strong><%= message.author %>:</strong></p>
+        <blockquote><%= message.quote %></blockquote>
+    </div>
+    <a href="/quotes">Vissza az idézetek listájához</a>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Author Search</title>
+</head>
+<body>
+  <h1>Find Quotes by Author</h1>
+  <form action="/authorRandom" method="post">
+    <label for="author">Enter Author Name:</label>
+    <input type="text" id="author" name="author" required>
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (typeof searchAuthor !== 'undefined') { %>
+    <h2>Quotes by <%= searchAuthor %></h2>
+    <% if (quotes && quotes.length > 0) { %>
+      <ul>
+        <% quotes.forEach(function(quote) { %>
+          <li>"<%= quote.quote %>" - <%= quote.author %></li>
+        <% }); %>
+      </ul>
+    <% } else { %>
+      <p>No quotes found for this author.</p>
+    <% } %>
+  <% } %>
+</body>
+</html>
